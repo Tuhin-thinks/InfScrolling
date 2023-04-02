@@ -1,0 +1,46 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.intro{
+    display: flex;
+    color: white;
+    height: 100vh;
+    /* background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))
+    ,url("https://www.hdwallpapers.in/download/sunset_scenery-wide.jpg"); */
+    background: transparent;
+    background-size: cover;
+    /* position: absolute; */
+}
+.intro>h4>span{
+    font-family: monospace;
+    font-weight:bold;
+    color: red;
+    background-color: black;
+}
+
+.typing{
+    position: relative;
+    margin-left: 10px;
+}
+.typing::after{
+    content: '';
+    position: absolute;
+    /* top: %; */
+    right: -5px;
+    width: 2px;
+    height: 5%;
+    border-right: 2px solid white;
+    animation: blink 0.7s infinite ease; 
+}
+
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+{{super()}}
+Flask NEWS API
+{% endblock %}
+
+{% block head %}
+    {{super()}}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/typewrite-style.css')}}">
+{% endblock %}
+
+{% block content %}
+    {{super()}}
+    <div class="intro">
+        <h4>
+            You can
+        </h4>
+        <h4>
+            <span class="typing"></span>
+        </h4>
+    </div>
+    <script src="{{url_for('static', filename='js/app.js')}}"></script>
+{% endblock %}
