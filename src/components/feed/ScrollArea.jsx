@@ -15,7 +15,7 @@ export const ScrollArea = ({ children, onScrollEnd }) => {
     // check if user has scrolled to the bottom of the scroll area and trying to scroll further down from the scroll even and window API.
     if (
       e.target.scrollTop + e.target.clientHeight >= e.target.scrollHeight &&
-      !isFetching
+      !isFetching // this is to prevent multiple calls to onScrollEnd
     ) {
       setIsFetching(true);
       await onScrollEnd();
@@ -34,7 +34,7 @@ isFetching is true"
       <div
         className="scroll-area"
         style={{
-          height: "65%",
+          height: "90vh",
           width: "100%",
           overflow: "scroll",
           // don't show the scroll bar
